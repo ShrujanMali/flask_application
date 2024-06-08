@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Update standard and photo</h1>
+      <form action="{{ url_for('update_standard', index=index, first_name=first_name, last_name=last_name) }}" method="POST">
+      <label for="standard">Standard:</label>
+      <input type="text" id="standard" name="standard" placeholder="standard">
+      <button type="submit">Start camera</button>
+    </form>
+      <a href="/add_student">Add new student</a>
+      <br>
+      <a href="/">Home</a>
+      <br>
+      <a href="/find_student">Find and update student</a>
+        
+{% endblock %}

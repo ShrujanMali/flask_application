@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+
+  <form action="{{ url_for('find_student')}}" method="post">
+    <h1>Find student page</h1>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="fname" placeholder="firstname">
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lname" placeholder="lastname">
+    <button type="submit">Submit</button>
+    <a href="/">Home page</a>
+
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} mt-3">
+                    {{ message }}. 
+                    {% if category == 'danger' %}
+                        Go to <a href="{{ url_for('add_student') }}">add student page</a>.
+                    {% elif category == 'info' %}
+                        <form action="{{ url_for('find_student', index=index, first_name=first_name, last_name=last_name) }}" method="POST">                     
+                        
+                        </form>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+{% endblock %}

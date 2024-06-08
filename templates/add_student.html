@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h1>Add new student</h1>
+    <div>
+  <form action="{{ url_for('add_student')}}" method="post">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="fname" placeholder="firstname">
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lname" placeholder="lastname">
+
+    <label for="standard">Standard:</label>
+    <input type="text" id="standard" name="standard" placeholder="standard">
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender" placeholder="gender">
+    <button type="submit">Submit</button>
+    <a href="/">Home page</a>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} mt-3">
+                    {{ message }}. 
+                    {% if category == 'info' %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}
