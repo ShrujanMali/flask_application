@@ -2,15 +2,8 @@
 #include <WiFi.h>
 #include <esp32cam.h>
 
-const char* WIFI_SSID = "AirFiber-ahQu8b";
-const char* WIFI_PASS = "Shu3air3Phei2Ahg";
-//const char* WIFI_SSID = "Sambhawana";
-//const char* WIFI_PASS = "Tej@am123";
-
-// Define static IP settings using four integers
-IPAddress local_IP(192, 168, 1, 101);
-IPAddress gateway(192, 168, 1, 1);
-IPAddress subnet(255, 255, 255, 0);
+const char* WIFI_SSID = "wifi name";
+const char* WIFI_PASS = "wifi password";
 
 WebServer server(80);
 
@@ -79,11 +72,6 @@ void setup(){
   // Disable persistent WiFi and set WiFi mode
   WiFi.persistent(false);
   WiFi.mode(WIFI_STA);
-
-  // Configure static IP address
-  if (!WiFi.config(local_IP, gateway, subnet)) {
-    Serial.println("STA Failed to configure");
-  }
 
   // Connect to WiFi
   WiFi.begin(WIFI_SSID, WIFI_PASS);
