@@ -2,7 +2,7 @@
 
 ## Description
 
-This project demonstrates a face recognition-based attendance system using an ESP32 CAM (IoT device) combined with Python created web application using Flask for easy to use and various data processing libraries. The system can register new students, mark attendance by recognizing faces, and update student information or photos. Features
+This project demonstrates a face recognition-based attendance system using an ESP32 CAM (IoT device) combined with Python easy to use and various data processing libraries. The system can register new students, mark attendance by recognizing faces, and update student information or photos. Features
 
     1. Add New Student: Register a new student by providing name, surname, gender, and class. The system captures 10 photos of the student, stores the data, and trains the model.
     2. Mark Attendance: Automatically marks attendance by recognizing faces through the camera. Only students in the database are marked present.
