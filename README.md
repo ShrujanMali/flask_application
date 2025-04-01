@@ -1,4 +1,4 @@
-# Flask Facial Recognition Attendance System using ESP 32 CAM
+# Facial Recognition Attendance System using ESP 32 CAM
 
 ## Description
 
@@ -12,7 +12,7 @@ This project demonstrates a face recognition-based attendance system using an ES
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,flask,opencv,cmake,github,arduino,sklearn,vscode,git" />
+    <img src="https://skillicons.dev/icons?i=python,opencv,cmake,github,arduino,sklearn,vscode,git" />
     
   </a>
 </p>
@@ -22,7 +22,6 @@ This project demonstrates a face recognition-based attendance system using an ES
     OpenCV: Employed for image processing and face recognition.
     Scikit-learn: Used for training and managing machine learning models.
     ESP32 CAM: IoT device for capturing and processing images.
-    Flask: Web application Framework
 
 ## Detailed Functionality
 
@@ -47,7 +46,7 @@ This project demonstrates a face recognition-based attendance system using an ES
 
 1. Clone the repository:
 
-        git clone https://github.com/ShrujanMali/face-recognition-attendance.git
+        git clone https://github.com/ShrujanMali/flask_application.git
 
 2. Navigate to the project directory:
 
